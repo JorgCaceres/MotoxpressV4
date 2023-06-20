@@ -1,0 +1,31 @@
+<ion-item-group class="borderBottom">
+  <ion-item lines="none" class="dashedBorderBottom">
+    <ion-label>
+      {{ order.address.address }}, {{ order.address.landmark }}, {{ order.address.title }}
+      <p>{{order?.id}}</p>
+      <ion-text>
+        <p>
+          ₹{{order?.grandTotal}}
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </p>
+      </ion-text>
+    </ion-label>
+    <ion-note slot="end" color="dark">
+      {{order?.status}}
+      <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
+    </ion-note>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>
+      <p class="time">{{order?.time}}</p>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button fill="outline" expand="block" color="primary" (click)="reorderItem()">REORDER</ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button fill="outline" expand="block" color="dark" (click)="getHelp()">GET HELP</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-label>
+  </ion-item>
+</ion-item-group>

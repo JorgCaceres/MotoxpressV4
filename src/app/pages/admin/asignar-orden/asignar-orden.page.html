@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Asignar Orden
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner *ngIf="isLoading"></ion-spinner>
+  <div *ngIf="!isLoading">
+    <!-- Mostrar los datos de la orden aquí -->
+    <h2>ID de la Orden: {{ id }}</h2>
+    <h2>ID de Usuario: {{ userId }}</h2>
+    <div *ngIf="order">
+      <h3>Datos de la Orden:</h3>
+      <p>{{ order.status}}</p>
+      <p>{{ order.address.address}}</p>
+    </div>
+  </div>
+</ion-content>
